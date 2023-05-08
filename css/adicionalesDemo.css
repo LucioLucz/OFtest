@@ -1,0 +1,64 @@
+:root{
+    --green: #74BC22;
+    --white: #fff;
+}
+
+.catalogo-item{
+    margin-bottom: 4%;
+}
+
+.navbar-brand img{
+    max-width: 30%;
+}
+
+.telefono {
+    background-color: var(--green);
+}
+
+#home h1 span, h2 span, #about .col-md-4:first-child, #team .team-wrapper .team-des h4, #carga_proyecto .col-md-4:first-child, #cobertura .media-heading-wrapper h2, #equipos .team-wrapper .team-des h4, #contact address .address-title, #contact label, a{
+    color: var(--green);
+}
+#about .col-md-4:first-child, #team .team-wrapper .team-des p a, #carga_proyecto .col-md-4:first-child {
+    background-color: var(--green);
+}
+
+.cert-item{
+    margin-bottom: 3%;
+}
+
+.crossfade>figure:nth-child(1) {
+    background-image: url(../images/bg_1.jpg) !important;
+}
+.crossfade>figure:nth-child(2) {
+    background-image: url(../images/home/home1.jpg) !important;
+}
+.crossfade>figure:nth-child(3) {
+    background-image: url(../images/bg_1.jpg) !important;
+}
+.crossfade>figure:nth-child(4) {
+    background-image: url(../images/home/westpeak-cover.jpeg) !important;
+}
+#equipos img, #sectoresDeAtencion img{
+    max-height: 257px;
+    object-fit: cover;
+    object-position: center;
+}
+#partners{
+    background-color: var(--white);
+    min-height: 350px;
+}
+img.elegirnos{
+    margin-top: 6%;
+}
+.ico-serv{
+    width: 37%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mision .servicios{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
