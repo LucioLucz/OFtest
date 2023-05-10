@@ -49,13 +49,13 @@ font-size: 14px;
 /* start about team service portfolio contact */
 #about, #cobertura, #carga_proyecto
 	{
-		padding-top: 60px;
+		padding-top: 20px;
 		padding-bottom: 40px;
 		background-color:#fff !important;
 	}
 #service
 	{
-		padding-top: 60px;
+		padding-top: 20px;
 		padding-bottom: 0px;
 		background-color:#fff !important;
 	}
@@ -73,10 +73,10 @@ font-size: 14px;
 		padding-bottom: 40px;
 		background-color:#fff !important;
 	}
-#equipos, #sectoresDeAtencion
+#equipos, #sectoresDeAtencion, #certificaciones
 	{
-		padding-top: 60px;
-		padding-bottom: 40px;
+		padding-top: 20px;
+		padding-bottom: 20px;
 		background-color:#fff !important;
 	}
 	
@@ -218,13 +218,11 @@ header .social-icon li a
 
 /* start nagivation */
 
-.nav > li {
-
-   /* position: relative;
+/* .nav > li {
+   position: relative;
     display: inline-block;
-    width: 100%;*/
-
-}
+    width: 100%;
+} */
 
 .navbar-default {
     background: #fff none repeat scroll 0 0;
@@ -469,9 +467,9 @@ padding-bottom:20px;
 line-height: 32px;
 font-size: 16px;
 	}
-#service ul{
-	/*margin-left: 15px;*/
-	}
+/* #service ul{
+	margin-left: 15px;
+	} */
 	
 #service ul ul{
 	padding-top: 9px;
@@ -566,12 +564,12 @@ font-weight:800;
 		        transition: all 0.4s ease-in-out;
 		position: relative;
 	}
-#team .team-wrapper:hover
+/* #team .team-wrapper:hover
 	{
 	
-		/*opacity: 0.4;*/
+		opacity: 0.4;
 	
-	}
+	} */
 #team .team-wrapper .team-des
 	{
 		padding: 0px 0;
