@@ -2,13 +2,25 @@
     --green: #74BC22;
     --white: #fff;
 }
-
+*{
+    transition: all 1s;
+}
 .catalogo-item{
     margin-bottom: 4%;
 }
 
 .navbar-brand img{
     max-width: 30%;
+}
+
+.nav.navbar-nav.navbar-right .dropdown-content{
+    display: unset;
+    opacity: 0;
+    transition: all 1s;
+}
+.nav.navbar-nav.navbar-right .dropdown:hover .dropdown-content{
+    opacity: 1;
+    display: block;
 }
 
 .telefono {
@@ -26,18 +38,25 @@
     margin-bottom: 3%;
 }
 
-.crossfade>figure:nth-child(1) {
-    background-image: url(../images/bg_1.jpg) !important;
+/* .crossfade>figure:nth-child(1) {
+    background-image: url(../images/home1.jpg) !important;
 }
-.crossfade>figure:nth-child(2) {
-    background-image: url(../images/home/home1.jpg) !important;
-}
+ .crossfade>figure:nth-child(2) {
+    background-image: url(../images/home/home2low.jpg) !important;
+} */
+/*
 .crossfade>figure:nth-child(3) {
-    background-image: url(../images/bg_1.jpg) !important;
-}
-.crossfade>figure:nth-child(4) {
+    background-image: url(../images/home/home1.jpg) !important;
+} */
+/* .crossfade>figure:nth-child(4) {
     background-image: url(../images/home/westpeak-cover.jpeg) !important;
+} */
+
+.blur{
+    backdrop-filter: blur(3px);
+    border-radius: 3px;
 }
+
 #equipos img, #sectoresDeAtencion img{
     max-height: 257px;
     object-fit: cover;
@@ -78,7 +97,7 @@ img.elegirnos{
 
 /* .navbar.navbar-default.templatemo-nav > .container .navbar-header .navbar-brand.current{ */
 .navbar.navbar-default.templatemo-nav > .container .navbar-header .navbar-brand{
-    padding: 0px 0px 0px 10px;
+    padding: 0px;
     height: 100%;
 }
 
@@ -113,10 +132,56 @@ img.elegirnos{
 .team-wrapper img{
     height: 328px;
     max-height: 328px !important;
-    width: 100%;
+    /* width: 100%; */
     object-fit: cover;
+    margin: auto;
+}
+
+.team-wrapper .team-des strong{
+    text-transform: uppercase;
 }
 
 .navbar.navbar-default.templatemo-nav{
     background-color: #fff !important;
 }
+
+.logo-container{
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+}
+
+.cat-img-container{
+    background-color: #fff;
+    padding: 20px;
+}
+
+#partners img{
+    width: 85%;
+}
+
+#carga_proyecto .media .media-body p{
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 480px){
+    #about .wow.fadeInLeft.animated{
+        height: 330px;
+    }
+    #certificaciones img{
+        margin: auto;
+    }
+    #certificaciones .col-xs-6 {
+        width: 50% !important;
+        padding: 5px;
+        margin: 0px;
+    }
+    #team .team-wrapper img{
+        height: auto;
+    }
+}
+

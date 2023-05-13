@@ -16,7 +16,7 @@ body
 	}
 	
 a {
-	color: #1697a5;
+	color: var(--green);
 }
 	
 a:hover {
@@ -33,7 +33,7 @@ h2 {
 }	
 	
 h2 span {
-    color: #1697a5;
+    color: var(--green);
     font-weight: bold;
 }
 
@@ -267,7 +267,7 @@ header .social-icon li a
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-    color: #1697a5 !important;
+    color: var(--green) !important;
 }
 
 .navbar-right {
@@ -651,7 +651,7 @@ margin-bottom: 30px;
 /* background: #fff; */
 padding: 20px;
 	}
-#equipos img, #sectoresDeAtencion img, #partners img
+#equipos img, #sectoresDeAtencion img
 	{
 		width:100%;
 	}
