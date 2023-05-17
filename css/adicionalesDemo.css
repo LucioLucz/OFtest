@@ -53,8 +53,9 @@
 } */
 
 .blur{
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(5px);
     border-radius: 3px;
+    min-height: 310px;
 }
 
 #equipos img, #sectoresDeAtencion img{
@@ -118,16 +119,10 @@ img.elegirnos{
 
 #mision img{
     width: 35%;
-    margin-top: 10%;
+    margin-top: 2%;
 }
 
-@media only screen and (max-width: 980px){
-    #mision img {
-        /* position: relative !important; */
-        margin: auto;
-        width: 50%;
-    }
-}
+
 
 .team-wrapper img{
     height: 328px;
@@ -185,3 +180,110 @@ img.elegirnos{
     }
 }
 
+/* ANIMACION TITULOS */
+
+#home .element{
+    position: absolute;
+    bottom: 0px;
+    height: 110px;
+}
+
+.crossfade.titles h1{
+    position: absolute;
+}
+
+.crossfade>h1{
+    opacity: 0;
+    animation: titleAnimation 16s linear infinite 0s;
+    /* backface-visibility: hidden; */
+    /* background-size: cover; */
+    /* background-position: center top; */
+    /* color: transparent; */
+    /* height: 100%; */
+    /* left: 0px; */
+    
+    /* position: absolute; */
+    /* top: 0px; */
+    /* width: 100%; */
+    /* z-index: 0; */
+}
+
+
+.crossfade>h1:nth-child(1) {
+    animation-delay: 0s;
+}
+.crossfade>h1:nth-child(2) {
+    /* opacity: 0 !important; */
+    animation-delay: 8s !important;
+}
+
+
+@keyframes titleAnimation {
+
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    8% {
+        
+        opacity: 1;
+    }
+
+    17% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 1;
+        /* animation-timing-function: ease-out; */
+    }
+
+    60%{
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+.img-responsive.vertical{
+    max-height: 70%;
+    object-fit: contain;
+    margin-top: 0px;
+}
+
+
+@media screen and (max-width: 980px) {
+    .img-responsive.horizontal{
+        display: block;
+    }
+    .vertical{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .horizontal{
+        display: none;
+    }
+    .vertical{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 980px){
+    #mision img {
+        margin: auto;
+        width: 75%;
+    }
+}
+
+.team-des h4{
+    min-height: 40px !important;
+}
+
+.team-wrapper{
+    min-height: 548px !important;
+}
