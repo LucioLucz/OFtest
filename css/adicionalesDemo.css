@@ -14,14 +14,30 @@
 }
 
 .nav.navbar-nav.navbar-right .dropdown-content{
-    display: unset;
-    opacity: 0;
-    transition: all 1s;
+    /* display: unset; */
+    /* opacity: 0; */
+
 }
 .nav.navbar-nav.navbar-right .dropdown:hover .dropdown-content{
-    opacity: 1;
+    /* opacity: 1; */
     display: block;
+    /* transition: all 1s; */
+    animation: navAnimation .4s linear 0s;
 }
+
+
+@keyframes navAnimation{
+    0%{
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+
+
 
 .telefono {
     background-color: var(--green);
@@ -277,6 +293,15 @@ img.elegirnos{
     #mision img {
         margin: auto;
         width: 75%;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    #home{
+        height: 80vh;
+    }
+    .blur{
+        max-height: 40%;
     }
 }
 
