@@ -1,10 +1,20 @@
 :root{
     --green: #74BC22;
+    --greenAlt: #2E8B57;
     --white: #fff;
 }
+
 *{
     transition: all 1s;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Figtree', sans-serif !important;
 }
+
+body{
+    background-color: #fff !important;
+}
+
 .catalogo-item{
     margin-bottom: 4%;
 }
@@ -13,11 +23,6 @@
     max-width: 30%;
 }
 
-.nav.navbar-nav.navbar-right .dropdown-content{
-    /* display: unset; */
-    /* opacity: 0; */
-
-}
 .nav.navbar-nav.navbar-right .dropdown:hover .dropdown-content{
     /* opacity: 1; */
     display: block;
@@ -73,19 +78,35 @@
     border-radius: 3px;
     min-height: 310px;
 }
-
+#home{
+    min-height: 660px !important;
+}
 #equipos img, #sectoresDeAtencion img{
     max-height: 257px;
     object-fit: cover;
     object-position: center;
 }
+#sectoresDeAtencion .team-wrapper, #sectoresDeAtencion .team-wrapper img, #certificaciones .cert-item .img-responsive, #team .catalogo-item .team-wrapper, #team .catalogo-item .team-wrapper .cat-img-container, #carga_proyecto .fadeInLeft.animated, #contact-form{
+    border-radius: 3px;
+}
+#team .catalogo-item .team-wrapper p.boton a{
+    border-radius: 0px 0px 3px 3px;
+}
+
 #partners{
     background-color: var(--white);
     min-height: 350px;
 }
-img.elegirnos{
-    margin-top: 6%;
+#partners h2{
+    margin-bottom: 20px !important;
 }
+img.elegirnos{
+    margin: auto;
+    margin-top: 6% !important;
+    max-height: 550px !important;
+}
+
+
 .ico-serv{
     width: 37%;
     display: flex;
@@ -157,7 +178,8 @@ img.elegirnos{
 }
 
 .logo-container{
-    min-height: 170px;
+    /* min-height: 110px; */
+    height: 110px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,11 +194,17 @@ img.elegirnos{
 
 #partners img{
     width: 85%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 #carga_proyecto .media .media-body p{
     margin-bottom: 0px;
     text-align: center;
+}
+
+#carga_proyecto .media .media-body img{
+    max-height: 550px !important;
 }
 
 @media only screen and (max-width: 480px){
@@ -295,6 +323,25 @@ img.elegirnos{
         width: 75%;
     }
 }
+@media only screen and (min-width: 768px){
+    .elegirnos.horizontal{
+        display: none;
+    }
+    .elegirnos.vertical{
+        display: block;
+    }
+}
+@media only screen and (max-width: 767px){
+    .navbar-brand img {
+        margin: 0px 35px;
+    }
+    .elegirnos.horizontal{
+        display: block;
+    }
+    .elegirnos.vertical{
+        display: none;
+    }
+}
 
 @media only screen and (max-width: 480px){
     #home{
@@ -305,10 +352,104 @@ img.elegirnos{
     }
 }
 
+
 .team-des h4{
     min-height: 40px !important;
 }
 
 .team-wrapper{
     min-height: 548px !important;
+}
+
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1}
+}
+
+/* MODAL */
+/* The Modal (background) */
+.modal {
+    opacity: 1;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 120px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    animation: fadeIn 0.5s ease-in 0s 1;
+    animation-fill-mode: both;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    opacity: 1;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px 30px;
+    border: 1px solid #888;
+    width: 25%;
+    min-width: 300px;
+    color: #333333;
+    height: 90%;
+  }
+  .modal-content h4{
+    color: #333333 !important;
+  }
+  
+  /* The Close Button */
+  .modal-content .close{
+    background-color: #fff !important;
+    color: #ff0000 !important;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    right: 3px;
+    top: 3px;
+  }
+  .modal-content .close:hover,
+  .modal-content .close:focus {
+    color: #000 !important;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+#team .team-wrapper .team-des p a:hover{
+    background-color: var(--greenAlt);
+}
+
+.navbar-default .navbar-nav > li > a {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#about .fadeInLeft.animated{
+    border-radius: 0px 0px 3px 3px !important;
+}
+/* #carga_proyecto .fadeInLeft.animated{
+    border-radius: 0px 0px 3px 3px !important;
+} */
+
+/* Animacion on scroll */
+.fadeTop {
+    opacity: 0; 
+    transform: translate(0, 10vh);
+    transition: all 1s;
+}
+.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+#copyright {
+    background-color: #303030 !important;
+}
+#certificaciones .cert-item .img-responsive{
+    margin: auto !important;
+}
+.fa:before {
+    font: normal normal normal 14px/1 FontAwesome !important;
 }

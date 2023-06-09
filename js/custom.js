@@ -39,7 +39,7 @@ $(function(){
         $(".navbar-collapse").collapse('hide');
     });
 	
-	 $('.ver_mas').click(function(){
+	$('.ver_mas').click(function(){
 		 var item=$(this).data('div');
 		 
 		 if($("#"+item).hasClass("active")){
@@ -56,9 +56,56 @@ $(function(){
 			
 		 }
     });
+
+
+/* ***** MODAL CATALOGO ***** */
+
+    		// Get the modal
+		let modal = document.getElementById("myModal");
+
+        let modalContent = document.getElementsByClassName("modal-content")[0];
+
+		// Get the button that opens the modal
+		// let btn = document.getElementById("myBtn");
+
+		// Get the <span> element that closes the modal
+		let span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		// btn.onclick = function() {
+		// 	modal.style.display = "block";
+		// }
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+			modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
 	
 	
-	
+// TEST MODAL 
+$('.ver_modal').click(function(){
+    let item=$(this).data('div');
+    let contenido = document.getElementById(item).innerHTML;
+    modalContent.innerHTML = `<div class="team-wrapper"> ${contenido}` + `</div><span class="close" id="cerrarModal">&times;</span>`;
+    let modalVerMas = $(".modal-content .team-wrapper p.boton")[0];
+    modalVerMas.style.display="none";
+    modal.style.display = "block";
+    let cerrarModal = document.getElementById("cerrarModal");
+    cerrarModal.onclick = function() {
+        modal.style.display = "none";
+    }
+});
+
+/* ***** MODAL CATALOGO Fin ***** */
+
+
     /* end navigation top js */
 
     $('body').bind('touchstart', function() {});
